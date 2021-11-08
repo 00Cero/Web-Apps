@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de prestamos</title>
+
+</head>
+<body>
+    <div class="masterContainer">
+        <h1>Calculadora de prestamos</h1>
+        <form action="" class="insertContainer">
+            <li class="insertBox">
+                <label for="cantidadPrestada">$</label>
+                <input type="number" name="cantidadPrestada" id="cantidadPrestada" placeholder=" Cantidad del prestamo">
+            </li>
+            <li class="insertBox">
+                <label for="porcentaje">%</label>
+                <input type="number" name="porcentaje" id="porcentaje" placeholder=" Interes">
+            </li>
+            <li class="insertBox">
+                <input type="number" name="años" id="cantidadAños" placeholder=" Años para pagar">
+            </li>
+            <input id="submitBtn" type="submit" value="Calcular">
+        </form>
+        <div class="imgLoader">
+            <img src="img/loading.gif" alt="loading image">
+        </div>
+        <div class="resultContainer">
+            <h3>Resultado</h3>
+            <form action="" class="resultForm">
+                <li class="resultox">
+                    <label for="pagoMensual">Pago Mensual:</label>
+                    <input type="text" name="pagoMensual" id="pagoMensual" disabled>
+                </li>
+                <li class="resultox">
+                    <label for="pagoTotal">Pago Total:</label>
+                    <input type="text" name="pagoTotal" id="pagoTotal" disabled>
+                </li>
+                <li class="resultox">
+                    <label for="interesTotal">Intereses Totales:</label>
+                    <input type="text" name="interesTotal" id="interesTotal" disabled>
+                </li>
+                
+            </form>
+        </div>
+
+
+
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
