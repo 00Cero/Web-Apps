@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+}
+
+:root{
+   /* CSS HEX */
+   --blue-sapphire: #22577a;
+   --cadet-blue: #38a3a5;
+   --medium-aquamarine: #57cc99;
+   --light-green: #80ed99;
+   --tea-green: #c7f9cc;
+   --smooth-white: #f2fdff;
+   --main-black: #081c15;
+
+}
+
+body{
+   font-family: 'Roboto',sans-serif;
+   min-height: 100vh;
+   width: 100vw;
+   background-color: var(--blue-sapphire);
+   
+   color: var(--smooth-white);
+   position: relative;
+   /* border: 1px solid red; */
+
+}
+
+a{
+   text-decoration: none;
+}
+
+
+
+/************* Mobile first ****************/
+
+.masterContainer{
+   margin: 0 auto;
+   max-width: 500px;
+   width: 100%;
+   padding: 1rem;
+   /* border: 1px solid red; */
+}
+
+.nameApp{
+   
+   margin: 2rem auto;
+   text-align: center;
+}
+
+.instructions{
+   font-size: 1.3rem;
+   text-align: center;
+   margin-bottom: 2rem;
+   
+}
+
+.insertContainer{
+   margin: 1rem auto;
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   /* border: 1px solid red; */
+}
+
+#insertArea{
+   padding: 0.5rem;
+   border: none;
+   border-radius: 5px;
+   outline: none;
+   background-color: var(--smooth-white);
+}
+
+
+
+.insertContainer textarea{
+   width: 100%;
+   height: 120px;
+   font-size: 1rem;
+   margin-bottom: 1rem;
+}
+
+.insertContainer button{
+   cursor: pointer;
+   padding: 0.8rem 1.6rem;
+   border: none;
+   outline: none;
+   margin-top: 1rem;
+   border-radius: 5px;
+   font-size: 1rem;
+   background-color: var(--cadet-blue);
+}
+
+.resultContainer{
+   padding: 1rem;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: 10px;
+   display: none;
+   /* border: 1px solid blue; */
+}
+
+#playAgainBtn{
+   display: block;
+   margin: 0 auto;
+   margin-top: 1rem;
+   
+   cursor: pointer;
+   padding: 0.8rem 1.6rem;
+   border: none;
+   outline: none;
+   border-radius: 5px;
+   font-size: 1rem;
+   color: var(--smooth-white);
+   border: 2px solid var(--medium-aquamarine);
+   background-color: transparent;
+   display: none;
+}
+
+
+.resultBox{
+   text-transform: uppercase;
+   padding: 0.5rem 1rem;
+   border-radius: 15px;
+   background-color: var(--cadet-blue);
+   /* border: 1px solid red; */
+}
+
+.resultBox.winner{
+   color: #000;
+   animation: glowing 1500ms infinite;
+}
+
+footer{
+   width: 100%;
+   height: 65px;
+   position: absolute;
+   bottom: -65px;
+   left: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--main-black);
+   /* background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); */
+   /* background-color: red; */
+}
+footer p{
+   font-size: 1.1rem;
+   
+}
+
+footer a{
+   color: var(--light-green);
+   /* color: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d) ; */
+   margin-left: 0.5rem;
+}
+
+footer a i{
+   font-size: 1.5rem;
+   border-radius: 5px;
+   background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+
+/* Animation for the winner */
+@keyframes glowing {
+   0% {
+     background-color: var(--tea-green);
+     box-shadow: 0 0 5px var(--tea-green);
+   }
+   50% {
+     background-color: var(--light-green);
+     box-shadow: 0 0 20px var(--light-green);
+   }
+   100% {
+     background-color: var(--tea-green);
+     box-shadow: 0 0 5px var(--tea-green);
+   }
+ }

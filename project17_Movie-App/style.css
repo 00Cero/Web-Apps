@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Hentaigana+Akari&display=swap');
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+}
+
+:root{
+   --shadow: #7b7263ff;
+   --fashion-fuchsia: #f00699ff;
+   --fashion-fuchsia-glow: rgb(238, 57, 172);
+   --alice-blue: #e9f1f7ff;
+   --rich-black-fogra-29: #0d1b2aff;
+   --black: #000000ff;
+}
+
+img{
+   width: 100%;
+   height: 100%;
+}
+
+body{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   min-height: 100vh;
+   /* background-color: var(--black); */
+   /* display: flex;
+   justify-content: center;
+   align-items: center; */
+}
+
+nav{
+   width: 100%;
+   height: 60px;
+   background: var(--rich-black-fogra-29);
+
+}
+
+nav ul{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: space-around;
+}
+
+nav ul li{
+   margin-right: 1.5rem;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   position: relative;
+}
+
+nav ul li:first-of-type{
+   color: whitesmoke;
+   
+}
+
+nav ul li i{
+   position: absolute;
+   right: 10px;
+   color: var(--fashion-fuchsia);
+}
+nav input{
+   height: 50%; width: 150px;
+   padding: 0.4rem;
+   color: var(--alice-blue);
+   background-color: inherit;
+   box-shadow: 0px 0px 0px 0px var(--fashion-fuchsia-glow);
+   outline: none;
+   border-radius: 5px;
+   border: 2px solid var(--fashion-fuchsia);
+   
+}
+
+nav input:focus{
+   animation: glowBar 1.5s infinite linear;
+}
+
+@keyframes glowBar {
+   0%,100%{
+      border-color: var(--fashion-fuchsia);
+      box-shadow: 0px 0px 0px 0px var(--fashion-fuchsia-glow);
+   }
+   50%{
+      border-color: var(--fashion-fuchsia-glow);
+      box-shadow: 0px 0px 15px 5px var(--fashion-fuchsia-glow);
+   }
+   
+}
+
+
+.masterContainer{
+   padding: 1rem;
+   display: grid;
+   gap: 15px;
+   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.movieCard{
+   cursor: pointer;
+   width: 100%; height: 300px;
+   border: 1px solid black;
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: 0px 0px 5px 1px var(--alice-blue);
+   position: relative;
+}
+
+   .imgContainer{
+      width: 100%; height: 70%;
+      background-color: red;
+      
+   }
+
+   
+   
+   .desContainer{
+      line-height: 1.3rem;
+      overflow-wrap: break-word;
+      /* word-wrap: normal; */
+      padding: 0.5rem;
+      height: 30%;
+      /* text-transform: capitalize; */
+      color: var(--alice-blue);
+      background-color: var(--rich-black-fogra-29);
+   }
+
+   .ratingBox{
+      padding: 0.4rem;
+      position: absolute;
+      top: 0; right: 0;
+      width: 40px; height: 40px;
+      background-color: blue;
+      border-radius: 0 0 0 10px;
+      /* From https://css.glass */
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 0 0 0 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border: 2px solid var(--fashion-fuchsia);
+      display: flex;
+      justify-content: center;
+      
+
+   }
+

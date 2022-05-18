@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Hentaigana+Akari&display=swap');
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+}
+
+:root{
+   --purple-navy: #404e7cff;
+   --cream: #f5ffc6ff;
+   --middle-blue: #68c3d4ff;
+   --bistre: #28190eff;
+}
+
+body{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   color: #fff;;
+   background-color: var(--purple-navy);
+   
+}
+
+.masterContainer{
+   width: 100%; max-width: 400px;
+   height: 100%;
+   border: 1px solid black;
+}
+
+.masterContainer h1{
+   width: 100%; 
+   margin: 1rem 0 1rem 0;
+   text-align: center;
+}
+
+.objetiveContainer{
+   text-align: center;
+   margin-bottom: 1rem;
+}
+
+/******** Diseñando los vasos **********/
+
+.glass{
+   margin: 0 auto;
+   border-radius: 0 0 20px 20px;
+   border: 5px solid var(--bistre);
+   overflow: hidden;
+}
+
+.big-glass{
+   width: 50%; height: 300px;
+   border-width: 8px;
+   margin-bottom: 1rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   
+}
+
+   .water{
+      width: 100%; height: 0;
+      position: absolute; z-index: -1;
+      bottom: 0;
+      background-color: var(--middle-blue);
+      transition: height 0.25s linear;
+   }
+
+.big-glass p{
+   text-align: center;
+   width: 55%;
+}
+
+.big-glass p:first-of-type{
+   font-size: 2rem;
+}
+
+.smallGlasses{
+   padding: 1.5rem;
+   display: grid;
+   gap: 10px;
+   grid-template-rows: repeat(2, 100px);
+   grid-template-columns: repeat(4, minmax(50px, 1fr));
+   /* border: 1px solid red; */
+}
+
+.small-glass{
+   cursor: pointer;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   
+}
+
+.small-glass.active{
+   background-color: var(--middle-blue);
+}
+
+/***********************************/
+
+p.instruction{
+   margin-bottom: 0.5rem;
+   text-align: center;
+}

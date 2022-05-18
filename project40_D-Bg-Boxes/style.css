@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Hentaigana+Akari&display=swap');
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+}
+
+:root{
+   --light-marron: #d8d0cf;
+   --dark-marron: #d79a66;
+}
+
+body{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #020202;
+}
+.changeBtn{
+   position: fixed;
+   top: 25px; left: 25px;
+   padding: 1.2rem;
+}
+
+.boxesContainer{
+   width: 400px; height: 400px;
+   display: flex;
+   flex-wrap: wrap;
+   /* border: 1px solid red; */
+}
+
+.boxesContainer.expanded{
+   width: 450px; height: 450px;
+   justify-content: space-between;
+}
+
+
+.box{
+   width: 100px; height: 100px;
+   background-repeat: no-repeat;
+   background-image: url('img/img_prueba.jpg');
+   background-size: 400px 400px;
+   transition: 0.3s ease;
+   position: relative;
+   background-color: yellow;
+}
+
+.box::before{
+   content: '';
+   width: 10px; height: 100%;
+   position: absolute;
+   top: 5px;
+   right: -10px;
+   transform: skewY(45deg);
+   background-color: var(--light-marron);
+
+}
+.box::after{
+   content: '';
+   width: 100%; height: 10px;
+   position: absolute;
+   bottom: -10px;
+   right: -5px;
+   transform: skewX(45deg);
+   background-color: var(--dark-marron);
+
+}
+
+
+.boxesContainer.expanded .box{
+   transform: rotateZ(360deg);
+}

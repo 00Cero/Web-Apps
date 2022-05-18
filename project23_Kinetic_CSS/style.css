@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Hentaigana+Akari&display=swap');
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+}
+
+body{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #000;
+}
+
+.masterContainer{
+   width: 100px; height: 100px;
+   border: 1px solid #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+}
+
+.masterContainer::after,
+.masterContainer::before{
+   content: '';
+   position: absolute;
+   border-width: 40px;
+   border-style: solid;
+
+   
+}
+.masterContainer::after{
+   /* background-color: green; */
+   border-color: transparent transparent transparent white;
+   animation: spining 2s infinite ease-in;
+
+}
+
+.masterContainer::before{
+   border-color:transparent transparent yellow transparent ;
+   animation: spining 2s infinite ease-in 0.5s;
+}
+
+@keyframes spining {
+   0%,25%{
+      transform: rotate(0deg);
+   }
+   50%,75%{
+      transform: rotate(180deg);
+   }
+   100%{
+      transform: rotate(360deg);
+   }
+}
+
+
+
+

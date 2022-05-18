@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Vujahday+Script&display=swap');
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+}
+
+body{
+   font-family: 'Vujahday Script' ;
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #FFDC80;
+   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23405de6' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%235851d8' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%237952d4' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23a336c4' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%239847c1' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23d400a4' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23ad3dac' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23f2007c' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23ba3798' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23ff0050' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23c13584' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23fd1d1d' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+   background-attachment: fixed;
+   background-size: cover;
+}
+
+.masterContainer{
+   /* padding: 1rem; */
+   display: flex;
+   flex-wrap: wrap;
+   background: rgba( 255, 255, 255, 0.5 );
+   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+   backdrop-filter: blur( 7.5px );
+   -webkit-backdrop-filter: blur( 7.5px );
+   border-radius: 10px;
+   border: 1px solid rgba( 255, 255, 255, 0.18 );
+   /* border: 1px solid red; */
+}
+
+.socialContainer{
+   margin: 1rem;
+   min-width: 250px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border-radius: 10px;
+   /* box-shadow: 6px 7px 85px -31px rgba(0,0,0,0.2) inset;
+   -webkit-box-shadow: 6px 7px 85px -31px rgba(0,0,0,0.2) inset;
+   -moz-box-shadow: 6px 7px 85px -31px rgba(0,0,0,0.2) inset; */
+   /* border: 1px solid blue; */
+}
+
+.socialContainer i{
+   color: #833ab4;
+}
+ 
+.socialContainer .socialNumbers{
+   margin: 1.5rem 0;
+   font-size: 2rem;
+}
+
+.socialContainer .socialInfo{
+   font-size: 1.5rem;
+}
+
+@media (max-width: 950px) {
+   .masterContainer{
+      flex-direction: column;
+   }
+
+   .socialContainer{
+      border-bottom: 1px solid #000;
+   }
+}
+
+
+     

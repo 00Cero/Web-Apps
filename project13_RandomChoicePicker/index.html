@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="style.css">
+   <link rel="icon" type="image/x-icon" href="img/logo_zero.png">
+   <title>Project: Randomizador</title>
+   
+</head>
+<body>
+   <div class="masterContainer">
+
+      <h1 class="nameApp">Randomizador</h1>
+      <p class="instructions">Inserta todas las opciones separadas por un espacio " ".</p>
+      <div class="insertContainer">
+         <textarea id="insertArea" cols="10" rows="5" placeholder="Estudiar Netflix" onfocus="this.placeholder=''"></textarea>
+         <button id="randomBtn" type="submit">Randomiza!</button>
+      </div>
+      <div class="resultContainer">
+         <!-- <div class="resultBox">alberto</div>
+         <div class="resultBox">2</div>
+         <div class="resultBox">2</div>
+         <div class="resultBox">2</div>
+         <div class="resultBox">2</div>
+         <div class="resultBox">2</div> -->
+      </div>
+      <button id="playAgainBtn">Otra tirada</button>
+   </div>
+   <footer>
+      <p>
+         &copy; 2021 - Alberto Salinas
+         <a href="https://www.instagram.com/00zerocode/"><i class="fab fa-instagram"></i> 00zerocode</a>
+      </p>
+   </footer>
+   <script src="app.js"></script>
+</body>
+</html>

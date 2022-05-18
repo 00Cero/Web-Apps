@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Hentaigana+Akari&display=swap');
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+}
+
+body{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #000;
+}
+
+
+.hoverboard{
+   max-width: 400px;
+   /* width: 500px; height: 500px; */
+   display: flex;
+   gap: 3px;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+   align-items: flex-start;
+   align-content: flex-start;
+   /* border: 1px solid red; */
+}
+.box{
+   width: 10px; height: 10px;
+   background-color: #1d1d1d;
+   transition: all 1s linear;
+}
+
+
+.box.active{
+   transition: all 0s linear;
+}

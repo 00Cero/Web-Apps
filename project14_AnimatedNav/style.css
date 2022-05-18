@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+}
+
+body{
+   font-family: 'Muli', sans-serif;
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+a{
+   text-decoration: none;
+   color:#000;
+}
+
+ul li{
+   list-style: none;
+}
+
+.navbar{
+   padding:0 1rem;
+   height: 50px;
+   width: 50px;
+   display: flex;
+   align-items: center;
+   transition: width 0.6s linear;
+   -webkit-box-shadow: 0px 0px 7px -1px #000000; 
+   box-shadow: 0px 2px 5px #000000;
+   /* border: 1px solid red; */
+}
+
+.navbar.active{
+   width: 330px;
+}
+
+
+
+.navbar ul{
+   
+   display: flex;
+   gap: 10px;
+   width: 0;
+   overflow: hidden;
+   transition: width 0.6s linear;
+   /* border: 1px solid blue; */
+}
+
+
+.navbar.active ul{
+   width: 100%;
+   margin-right: 10px;
+}
+
+.navbar ul li{
+   transform: rotateY(0deg);
+   opacity: 0;
+   transition: opacity 0.6s linear, transform 0.6s linear;
+}
+
+.navbar.active ul li{
+   transform: rotateY(360deg);
+   opacity: 1;
+}
+
+
+.navbar .navbarBtn{
+   cursor: pointer;
+   /* margin-left: 10px; */
+   width: 20px;
+   height: 20px;
+   background-color: inherit;
+   position: relative;
+   border: none;
+   /* border: 1px solid green; */
+} 
+
+.navbarBtn [class^="line"]{
+   width: 100%;
+   height: 2px;
+   background-color: #000;
+   position: absolute;
+   
+   transition: transform 0.6s linear;
+}
+
+.navbar .navbarBtn .line1{
+   top: 5px;
+   
+}
+.navbar .navbarBtn .line2{
+   bottom: 5px;
+}
+
+
+.navbar.active .navbarBtn .line1{
+   transform: rotate(765deg) translateY(5.5px);
+
+}
+
+.navbar.active .navbarBtn .line2{   
+   transform: rotate(-765deg) translateY(-5.5px);
+
+}
+

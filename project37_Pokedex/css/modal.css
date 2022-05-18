@@ -1,0 +1,295 @@
+
+img{
+   width: 100%;
+   height: 100%;
+}
+
+.modalWindow{
+   position: absolute;
+   z-index: 1000;
+   background-color: rgba(0, 0, 0, 0.6);
+   
+   bottom: 0;
+   right: 0; left: 0;
+   width: 100vw; height: 100vh;
+   overflow-y: hidden;
+   
+   transform: scale(0);
+   transition: transform 0.3s ease;
+
+}
+
+.modalWindow .modalInner{
+   filter: blur(0);
+   background-color: red;
+   width: 400px; height: 400px;
+}
+
+.modalMasterContainer{
+   width: 100vw; height: 100vh;
+   background-color: var(--black-main);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+}
+
+.modalBtn{
+   cursor: pointer;
+   position: absolute;
+   font-size: 1.2rem;
+   color: #ccc;
+   border: none;
+   outline: none;
+   background-color: transparent;
+   top: 5rem;
+   right: 5rem;
+   padding: 1rem;
+}
+
+[class^="horizontalRow"]{
+   position: absolute;
+   width: 100%; height: 2px;
+
+}
+
+.horizontalRowTop{
+   top: 3.5rem;
+   background-color: var(--blue-main);
+}
+.horizontalRowBottom{
+   bottom: 3.5rem;
+   background-color: var(--blue-main);
+}
+
+[class^="verticalRow"]{
+   position: absolute;
+   width: 2px; height: 100%;
+
+}
+
+.verticalRowLeft{
+   background-color: var(--red-light);
+   left: 3.5rem;
+}
+.verticalRowRight{
+   background-color: var(--yellow-light);
+   right: 3.5rem;
+}
+
+.nameContainer{
+   padding: 1rem;
+   color: #fff;
+   position: absolute;
+   top: 6rem; left: 5rem;
+   border-radius: 10px;
+   box-shadow: 0 0 5px #fff;
+   /* border: 1px solid #fff; */
+}
+
+.pokeballContainer{
+   position: absolute;
+   top: -10px; left: -10px;
+   width: 30px; height: 30px;
+   transform: rotate(-30deg);
+   /* border: 1px solid red; */
+}
+
+   .pokemonName{
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      margin-bottom: 0.5rem;
+   }
+
+   .pokemonFit{
+      font-size: 1.3rem;
+      margin-left: 0.5rem;
+   }
+
+.statsContainer{
+   position: absolute;
+   bottom: 5rem;
+   left: 5rem;
+   /* width: 300px; height: 300px; */
+   
+   /* border: 1px solid red; */
+}
+
+   .statRow{
+      padding: 0.3rem 0.6rem;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      /* border: 1px solid violet; */
+   }
+
+   .statRow > p{
+      font-size: 1.1rem;
+      /* min-width: 30%; */
+      color: #fff;
+      /* font-family: 'PokemonGb'; */
+   }
+
+      .progressBar{
+         height: 11px;
+         /* width: 80px; */
+         border-radius: 20px;
+         background-color: rgb(127, 238, 93);
+         position: relative;
+         z-index: 3000;
+         /* border: 1px solid green; */
+
+      }
+
+      .progressBar::after{
+         content: '';
+         position: absolute;
+         width: 100px;
+         height: 10px;
+         border-radius: 20px;
+         z-index: 3;
+         /* height: 100%; */
+         /* width: 100%; */
+         border: 1px solid #ccc;
+         /* background-color: #ccc; */
+      }
+
+
+
+      .extraInfoContainer{
+         padding: 1rem;
+         position: absolute;
+         bottom: 6rem; right: 6rem;
+         display: flex;
+         gap: 20px;
+         flex-direction: column;
+         /* border: 1px solid red; */
+         border-radius: 10px;
+         box-shadow: 0 0 5px #fff;
+      }
+      
+      .abilitiesContainer{
+         min-width: 150px; height: 30px;
+         color: #fff;
+         display: flex;
+         gap: 10px;
+         align-items: center;
+         /* border: 1px solid green; */
+      }
+
+      .abilitiesContainer > h3{
+         letter-spacing: 2px;
+      }
+      
+      .abilitiesContainer > p{
+         text-transform: uppercase;
+      }
+      
+      .poketypeContainer{
+         display: flex;
+         justify-content: flex-start;
+         gap: 15px;
+         /* border: 1px solid red; */
+      }
+      
+      .poketypeBox{
+      
+         font-size: 1.2rem;
+         color: #000;
+         padding: 0.4rem 1.2rem;
+         border-radius: 15px;
+         background-color: transparent;
+      }
+
+.centerContainer{
+   width: 400px; height: 400px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   /* border: 1px solid red; */
+
+}
+
+   .circleBig{
+      position: absolute;
+      /* width: 100%; height: 100%; */
+      inset: 5px;
+      border-radius: 50%;
+      filter: saturate(50%);
+      background-color: red;
+   }
+
+      .circleBig::after{
+         content: '';
+         position: absolute;
+         inset: 5px;
+         border-radius: 50%;
+         background-color: var(--black-main);
+      }
+
+   .circleSmall{
+      position: absolute;
+      inset: 80px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      /* background-color: #; */
+   }
+
+      .circleSmall::before{
+         content: '';
+         width: 150px;
+         height: 400px;
+         background-color: #fff;
+      }
+
+      .circleSmall::after{
+         content: '';
+         position: absolute;
+         inset: 5px;
+         border-radius: 50%;
+         background-color: var(--black-main);
+      }
+
+   .imgModalContainer{
+      position: relative;
+      bottom: 30px;
+      z-index: 100;
+      width: 270px; height: 270px;
+      /* border: 3px solid green; */
+   }
+
+.container{
+   width: 300px;
+   height: 300px;
+   border-radius: 50%;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* border: 1px solid red; */
+}
+
+.container::after{
+   content: '';
+   position: absolute;
+   
+   width: 100px;
+   height: 400px;
+   /* border-radius: 50%; */
+   /* animation: spinCircle 5s ease infinite; */
+   background-color: red;
+}
+
+/* @keyframes spinCircle {
+   0%{
+   transform: rotate(0);
+   }
+   100%{
+   transform: rotate(360deg);
+   }
+} */
+
