@@ -1,0 +1,176 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+}
+
+body{
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: var(--azure-x-11-web-color);
+   background-color: var(--prussian-blue);
+}
+
+:root{
+   /* CSS HEX */
+   --prussian-blue: #13293dff;
+   --zomp: #2ca58dff;
+   --hookers-green: #357266ff;
+   --carolina-blue: #1b98e0ff;
+   --azure-x-11-web-color: #e8f1f2ff;
+}
+
+input{
+   display: block;
+   width: 100%;
+   border: none;
+   outline: none;
+}
+button{
+   cursor: pointer;
+   color: var(--azure-x-11-web-color);
+   display: block;
+   padding: 12px 0;
+   font-size: 1rem;
+   width: 80%;
+   margin: 0 auto;
+   border: 2px solid var(--hookers-green);
+   border-radius: 5px;
+   background-color: inherit;
+   transition: border-color 0.2s ease ;
+}
+
+p a{
+   color: var(--zomp);
+   transition: color 0.2s ease;
+}
+p a:hover{
+   color: var(--carolina-blue);
+}
+
+
+
+.masterContainer{
+   padding: 1rem;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   justify-content: center;
+   align-items: center;
+   border: 2px solid var(--hookers-green);
+   border-radius: 5px;
+}
+
+.formStyle{
+   position: relative;
+   width: 350px;
+   margin-bottom: 40px;
+   /* border: 1px solid green; */
+}
+
+.formStyle label{
+   position: absolute;
+   bottom: 10px;
+   
+}
+
+.formStyle label span {
+   display: inline-block;
+   transition: transform 0.5s cubic-bezier(0,1.13,.86,.72);
+}
+
+   
+.formStyle i{
+   position: absolute;
+   bottom: 10px;
+   right: 10px;
+}
+
+.formStyle input{
+   color: var(--azure-x-11-web-color);
+   font-size: 18px;
+   padding: 8px 4px;
+   background-color: transparent;
+   border-bottom: 2px solid var(--carolina-blue);
+}
+
+.formStyle input:focus + label span,
+.formStyle input:valid + label span{
+   color: var(--zomp);
+   transform: translateY(-28px);
+}
+
+/* Button Stuff */
+
+/* button:active{
+   transform: scale(0.98);
+}
+
+button:hover{
+   
+   border-color: var(--azure-x-11-web-color);
+} */
+
+.glow-on-hover {
+   width: 220px;
+   height: 50px;
+   border: none;
+   outline: none;
+   color: #fff;
+   background: inherit;
+   cursor: pointer;
+   position: relative;
+   z-index: 0;
+   border: 2px solid var(--hookers-green);
+   border-radius: 10px;
+}
+
+.glow-on-hover:before {
+   content: '';
+   background: linear-gradient(45deg , var(--azure-x-11-web-color) ,var(--carolina-blue),var(--hookers-green),var(--prussian-blue),var(--zomp));
+   position: absolute;
+   top: -2px;
+   left:-2px;
+   background-size: 400%;
+   z-index: -1;
+   filter: blur(5px);
+   width: calc(100% + 4px);
+   height: calc(100% + 4px);
+   animation: glowing 15s linear infinite;
+   opacity: 0;
+   transition: opacity .3s ease-in-out;
+   border-radius: 10px;
+}
+
+.glow-on-hover:active {
+   color: #000
+}
+
+.glow-on-hover:active:after {
+   background: transparent;
+}
+
+.glow-on-hover:hover:before {
+   opacity: 1;
+}
+
+.glow-on-hover:after {
+   z-index: -1;
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: inherit;
+   left: 0;
+   top: 0;
+   border-radius: 10px;
+}
+
+@keyframes glowing {
+   0% { background-position: 0 0; }
+   50% { background-position: 400% 0; }
+   100% { background-position: 0 0; }
+}

@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Hentaigana+Akari&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+}
+
+:root{
+   /* CSS HEX */
+   --light-sea-green: #20a39eff;
+   --eerie-black: #201e1fff;
+   --pale-pink: #ffdbdeff;
+   --light-pink: #ffb3b6ff;
+   --corn: #9CE37D;
+
+}
+
+body{
+   --container-width : 400px;
+   font-family: 'Yuji Hentaigana Akari', cursive;
+   height: 100vh;
+   width: 100vw;
+   
+   color: var(--eerie-black);
+   background-color: var(--pale-pink);
+}
+
+h1{
+   text-align: center;
+   margin: 3rem auto;
+}
+
+.masterContainer{
+   margin: 0 auto;
+   width: fit-content;
+   display: grid;
+   grid-template-columns: 1fr;
+   /* border: 1px solid red; */
+}
+
+.mainContainer{
+   letter-spacing: 2px;
+   margin: 0 auto;
+   margin-bottom: 1.5rem;
+   padding: 1rem;
+   min-width: var(--container-width);
+   width: 100%;
+   position: relative;
+   border: 2px solid var(--eerie-black);
+   border-radius: 8px;
+   box-shadow: -1px 1px 33px -12px rgba(0,0,0,0.77);
+   /* -webkit-box-shadow: -1px 1px 33px -12px rgba(0,0,0,0.77);
+   -moz-box-shadow: -1px 1px 33px -12px rgba(0,0,0,0.77); */
+   overflow: hidden;
+}
+
+.mainContainer p,
+.mainContainer h2{
+   margin:0 2rem;
+}
+
+.mainContainer h2{
+   font-size: calc(var(--container-width) * 0.05);
+}
+.mainContainer p{
+   font-size: calc(var(--container-width) * 0.042);
+}
+
+.mainContainer::before,
+.mainContainer::after{
+   content: '\f075';
+   font-family: 'Font Awesome 5 Free';
+   position: absolute;
+   z-index: -1;
+   top: -15px;
+   left: 0;
+   font-size: 5rem;
+   opacity: 0.4;
+   color: var(--light-sea-green);
+   font-weight: lighter;
+}
+
+.mainContainer::after{
+   top: 25px;
+   left: 25px;
+   color: var(--corn);
+   transform: rotateY(180deg);
+   display: none;
+}
+
+.mainContainer.active::after{
+   display: block;
+}
+
+
+.mainContainer button{
+   cursor: pointer;
+   width: 20px;
+   height: 20px;
+   color: whitesmoke;
+   border: none;
+   outline: none;
+   border-radius: 8px;
+   background-color: var(--eerie-black);
+   position: absolute;
+   top: 25px;
+   right: 20px;
+}
+
+.mainContainer button:active{
+   transform: scale(0.98);
+}
+
+
+.mainContainer p{
+   margin: 1rem;
+   
+   display: none;
+   text-transform: lowercase;
+}
+
+.mainContainer.active p{
+   display: block;
+   opacity: 1;
+}
+
+.mainContainer i.fa-times{
+   display: none;
+}
+.mainContainer.active i.fa-times{
+   display: block;
+}
+
+.mainContainer.active i.fa-chevron-down{
+   display: none;
+}
+
